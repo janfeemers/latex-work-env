@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/debian
+{
+	"name": "Debian",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick an Debian version: bullseye, buster
+		// Use bullseye on local arm64/Apple Silicon.
+		"args": { "VARIANT": "bullseye" }
+	},
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"James-Yu.latex-workshop",
+				"EditorConfig.EditorConfig",
+				"streetsidesoftware.code-spell-checker",
+				"mhutchie.git-graph",
+				"donjayamanne.git-extension-pack"
+			]
+		}
+	}
+}
